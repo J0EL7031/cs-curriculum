@@ -84459,10 +84459,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1750497384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f256c38fb15b4f4ca7ad354be5ad53c, type: 3}
+  m_Script: {fileID: 11500000, guid: b8d5ff7e6cf1045b6829da83a74480da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  inCaves: 0
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,

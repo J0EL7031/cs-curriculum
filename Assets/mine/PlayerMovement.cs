@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-     float wspeed;
+     float xspeed;
      float xdirection;
      float xvector;
+     float yspeed;
+     float ydirection;
+     float yvector;
+     public bool inCaves;
 
 
 
@@ -14,7 +18,12 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wspeed = 5f;
+        xspeed = 5f;
+        yspeed = 5f;
+        if (inCaves)
+        {
+            yspeed = 0;
+        }
     }
 
 
@@ -23,8 +32,10 @@ public class PlayerMovement : MonoBehaviour
     {
 
         xdirection = Input.GetAxis("Horizontal");
-        xvector = xdirection * wspeed * Time.deltaTime;
-        transform.position = transform.position + new Vector3(xvector, y: 0f, z: 0f);
+        xvector = xdirection * xspeed * Time.deltaTime;
+        ydirection = Input.GetAxis("Vertical");
+        yvector =ydirection * yspeed * Time.deltaTime;
+        transform.position = transform.position + new Vector3(xvector, y:yvector, z: 0f);
     }
 }
 
