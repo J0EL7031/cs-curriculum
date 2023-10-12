@@ -39899,6 +39899,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5076315926971607200, guid: 0614f425ed9b1234285a39c655cdf377,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3000049536412027477, guid: 0614f425ed9b1234285a39c655cdf377,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39967,6 +39972,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5076315926971607200, guid: 0614f425ed9b1234285a39c655cdf377,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3000049536412027477, guid: 0614f425ed9b1234285a39c655cdf377,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40712,7 +40722,7 @@ GameObject:
   - component: {fileID: 1205402298}
   - component: {fileID: 1205402297}
   m_Layer: 0
-  m_Name: HUD
+  m_Name: hud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40734,6 +40744,7 @@ MonoBehaviour:
   healthPool: {fileID: 1750497393}
   coinText: {fileID: 1101109203}
   healthText: {fileID: 1968194883}
+  coins: 0
 --- !u!4 &1205402298
 Transform:
   m_ObjectHideFlags: 0
@@ -84972,7 +84983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7e96ec3df134db080c873deab993a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
+  hud: {fileID: 0}
+  coins: 0
 --- !u!114 &1750497393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85481,6 +85493,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5076315926971607200, guid: 0614f425ed9b1234285a39c655cdf377,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3000049536412027477, guid: 0614f425ed9b1234285a39c655cdf377,
         type: 3}
       propertyPath: m_LocalPosition.x

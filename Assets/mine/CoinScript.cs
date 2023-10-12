@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
-    public int Coins;
-    
+    public HUD hud;
+
+    public int coins;
     // Start is called before the first frame update
     void Start()
     {
-        Coins = 0;
-        print("Coins:"+Coins);
+        coins = 0;
+        print("Coins:"+coins);
     }
 
     // Update is called once per frame
@@ -23,9 +24,9 @@ public class CoinScript : MonoBehaviour
              {
                  if (other.CompareTag("Coin"))
                  { 
-                     Coins += 1;
+                     coins += 1;
                      other.gameObject.SetActive(false);
-                     print("Coins:"+Coins);
+                     print("Coins:"+coins);
                  }
              }
 }

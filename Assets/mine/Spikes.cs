@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static TMPro.TextMeshProUGUI;
 
 public class Spikes : MonoBehaviour
 {
+    public HUD hud;
+    
     public int health;
     // Start is called before the first frame update
     void Start()
@@ -17,11 +21,13 @@ public class Spikes : MonoBehaviour
     {
         
     }
-    public void OnCollisionEnter2D(Collision2D other)
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        //if (other.CompareTag())
+        if (other.gameObject.CompareTag("Spikes"))
         { 
             health += -1;
         }
     }
+
 }

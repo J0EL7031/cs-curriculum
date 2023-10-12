@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,23 @@ public class HUD : MonoBehaviour
 
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI healthText;
+
+    public static HUD hud;
+
+    
+
+    private void Awake()
+    {
+        if (hud != null && hud != this)
+        {
+            Destroy(gameObject);
+        }
+        else hud = this;
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +37,7 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinText.text = "Coins: "+purse.Coins;
+        coinText.text = "Coins: "+purse.coins;
 
         healthText.text = "HP: "+healthPool.health;
     }
