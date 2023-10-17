@@ -6,8 +6,8 @@ using TMPro;
 
 public class HUD : MonoBehaviour
 {
-    public CoinScript purse;
-    public Spikes healthPool;
+    public int health;
+    public int coins;
 
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI healthText;
@@ -37,8 +37,8 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        coinText.text = "Coins: "+purse.coins;
+        coinText.text = "Coins: "+coins;
 
-        healthText.text = "HP: "+healthPool.health;
+        healthText.text = "HP: "+health;
     }
 }

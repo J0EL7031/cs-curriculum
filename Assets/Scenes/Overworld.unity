@@ -40196,6 +40196,7 @@ GameObject:
   - component: {fileID: 800287812}
   - component: {fileID: 800287811}
   - component: {fileID: 800287810}
+  - component: {fileID: 800287813}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -40287,6 +40288,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &800287813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800287808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcb96e73972b4b1783e70c16e8b6022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  coins: 0
+  coinText: {fileID: 1101109203}
+  healthText: {fileID: 1968194883}
 --- !u!1001 &848324723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40735,16 +40752,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205402296}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fcb96e73972b4b1783e70c16e8b6022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purse: {fileID: 1750497389}
-  healthPool: {fileID: 1750497393}
+  health: 0
+  coins: 0
   coinText: {fileID: 1101109203}
   healthText: {fileID: 1968194883}
-  coins: 0
 --- !u!4 &1205402298
 Transform:
   m_ObjectHideFlags: 0
@@ -84997,6 +85013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41cb02e6874840a6be0fd3963c5172b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hud: {fileID: 0}
   health: 0
 --- !u!4 &1825907749 stripped
 Transform:

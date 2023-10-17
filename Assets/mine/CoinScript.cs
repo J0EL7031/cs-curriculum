@@ -7,12 +7,13 @@ public class CoinScript : MonoBehaviour
 {
     public HUD hud;
 
-    public int coins;
+    //public int coins;
     // Start is called before the first frame update
     void Start()
     {
-        coins = 0;
-        print("Coins:"+coins);
+        hud.coins = 0;
+        hud = GameObject.FindObjectOfType<HUD>();
+        print("Coins:"+hud.coins);
     }
 
     // Update is called once per frame
@@ -24,9 +25,9 @@ public class CoinScript : MonoBehaviour
              {
                  if (other.CompareTag("Coin"))
                  { 
-                     coins += 1;
+                     hud.coins += 1;
                      other.gameObject.SetActive(false);
-                     print("Coins:"+coins);
+                     print("Coins:"+hud.coins);
                  }
              }
 }
