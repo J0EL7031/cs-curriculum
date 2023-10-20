@@ -84999,8 +84999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7e96ec3df134db080c873deab993a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hud: {fileID: 0}
-  coins: 0
+  hud: {fileID: 800287813}
 --- !u!114 &1750497393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85013,8 +85012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a41cb02e6874840a6be0fd3963c5172b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hud: {fileID: 0}
-  health: 0
+  hud: {fileID: 800287813}
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,

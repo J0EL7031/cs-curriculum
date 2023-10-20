@@ -19,10 +19,10 @@ public class Spikes : MonoBehaviour
     {
         hud.health = 10;
         hud = GameObject.FindObjectOfType<HUD>();
-        iframesTimer = 3;
+        iframesTimer = 1;
     }
 
-    // Update is called once per frame
+    // Update is called once per frame3
     void Update()
     {
         if (hud.health < 1)
@@ -38,7 +38,7 @@ public class Spikes : MonoBehaviour
             if (iframesTimer < 0)
             {
                 iframes = false;
-                iframesTimer = 3;
+                iframesTimer = 1;
             }
         }
     }
@@ -54,14 +54,5 @@ public class Spikes : MonoBehaviour
                 }
             }
         }
-    //my functins
-  //  Void Death()
-    //{
-        
-    //}
-
-   // Void ChangeHealth(int amount)
-    //{
-        
-    //}
+   
 }
