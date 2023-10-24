@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     float ydirection;
     float yvector;
     public bool inCaves;
+    public float playerx;
 
     
 
@@ -36,5 +38,6 @@ public class PlayerMovement : MonoBehaviour
         ydirection = Input.GetAxis("Vertical");
         yvector = ydirection * yspeed * Time.deltaTime;
         transform.position = transform.position + new Vector3(xvector, y: yvector, z: 0f);
+        playerx = transform.position.x;
     }
 }
