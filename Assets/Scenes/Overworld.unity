@@ -136,6 +136,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turret_Projectile
       objectReference: {fileID: 0}
+    - target: {fileID: 7078839693356781294, guid: d181d0f6b0e116b4298e1e64b89f707e,
+        type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 800287813}
     - target: {fileID: 7101103389178533185, guid: d181d0f6b0e116b4298e1e64b89f707e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40424,6 +40429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcb96e73972b4b1783e70c16e8b6022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerx: 0
   health: 0
   coins: 0
   coinText: {fileID: 1101109203}
@@ -40972,6 +40978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcb96e73972b4b1783e70c16e8b6022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerx: 0
   health: 0
   coins: 0
   coinText: {fileID: 1101109203}
@@ -85202,7 +85209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inCaves: 0
-  playerx: 0
+  hud: {fileID: 800287813}
 --- !u!114 &1750497389
 MonoBehaviour:
   m_ObjectHideFlags: 0

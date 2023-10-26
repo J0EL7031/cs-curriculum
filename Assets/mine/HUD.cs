@@ -6,6 +6,9 @@ using TMPro;
 
 public class HUD : MonoBehaviour
 {
+
+    public float playerx;
+    
     public int health;
     public int coins;
 

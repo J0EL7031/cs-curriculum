@@ -6,25 +6,29 @@ using UnityEngine;
 
 public class shootPlayer : MonoBehaviour
 {
-    public float playerx;
+    public HUD hud;
     public float fireX;
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        fireX = transform.position.x;
+        fireX = gameObject.transform.position.x;
+        
+        //transform.LookAt();
     }
 
     // Update is called once per frame
     void Update()
     {
-       
-        fireX = transform.position.x;
         
-        if (playerx > transform.position.x);
+        
+        
+        if (hud.playerx > fireX);
         {
             fireX += 1;
         }
 
     }
-}        
+    
+}
+
