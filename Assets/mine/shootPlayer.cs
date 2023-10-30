@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class shootPlayer : MonoBehaviour
 {
@@ -14,13 +15,13 @@ public class shootPlayer : MonoBehaviour
     {
         fireX = gameObject.transform.position.x;
         
-        //transform.LookAt();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    //    transform.Rotate();
         
         
         if (hud.playerx > fireX);
