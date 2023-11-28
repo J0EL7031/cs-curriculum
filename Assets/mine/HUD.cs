@@ -8,7 +8,8 @@ public class HUD : MonoBehaviour
 {
 
     public float playerx;
-    
+    public float playery;
+
     public int health;
     public int coins;
 

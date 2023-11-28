@@ -40,5 +40,6 @@ public class PlayerMovement : MonoBehaviour
         yvector = ydirection * yspeed * Time.deltaTime;
         transform.position = transform.position + new Vector3(xvector, y: yvector, z: 0f);
         hud.playerx = gameObject.transform.position.x;
+        hud.playery = gameObject.transform.position.y;
     }
 }

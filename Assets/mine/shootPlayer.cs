@@ -13,22 +13,17 @@ public class shootPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fireX = gameObject.transform.position.x;
-        
-        
+        hud = GameObject.FindObjectOfType<HUD>();
+        transform.Rotate(hud.playerx,hud.playery,0);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-    //    transform.Rotate();
-        
-        
-        if (hud.playerx > fireX);
-        {
-            fireX += 1;
-        }
 
+        
+        
     }
     
 }
