@@ -10,10 +10,12 @@ public class Turret : MonoBehaviour
 {
     public bool inRange;
 
-    
+    private float step;
+    private Transform target;
     private float cooldown;
     private float speed;
     private GameObject player;
+    private float cooldownTimer;
     
     public GameObject turret_Projectile;
     // Start is called before the first frame update
@@ -21,23 +23,29 @@ public class Turret : MonoBehaviour
     {
         inRange = false;
        
-        cooldown = 0;
-        
+        cooldown = 1;
+        cooldownTimer = 0;
+            
+
+        speed = 1;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        cooldown -= Time.deltaTime;
-        if (cooldown < 1)
+        cooldownTimer -= Time.deltaTime;
+        if (cooldownTimer < 0)
         {
             if (inRange)
             {
-                GameObject temp = Instantiate(turret_Projectile, transform.position, transform.rotation);
-                temp.GetComponent<Rigidbody2D>().AddForce(new Vector2(player.transform.position.x, player.transform.position.y) * speed);
-
-                cooldown = 3;
+                GameObject clone;
+                
+                clone = Instantiate(turret_Projectile, transform.position + new Vector3(0,0.4898863f,0), transform.rotation);
+               // clone.transform.position = Vector3.MoveTowards(clone.transform.position, target.position, step);
+                    
+                cooldownTimer = cooldown;
                 
 
                

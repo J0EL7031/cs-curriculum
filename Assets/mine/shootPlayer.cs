@@ -7,23 +7,32 @@ using UnityEngine.UIElements;
 
 public class shootPlayer : MonoBehaviour
 {
-    public HUD hud;
-    public float fireX;
+    public float speed;
+  
+    private Vector3 target;
     
     // Start is called before the first frame update
     void Start()
     {
-        hud = GameObject.FindObjectOfType<HUD>();
-        transform.Rotate(hud.playerx,hud.playery,0);
+        target = GameObject.FindObjectOfType<PlayerMovement>().gameObject.transform.position;
+        speed = 8;
+       
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        var step = speed * Time.deltaTime;
 
+        transform.position = Vector3.MoveTowards(transform.position, target, step);
         
-        
+        if (Vector3.Distance(transform.position, target) < 0.001f)
+        {
+            Destroy(gameObject);
+        }
+
+
     }
     
 }
