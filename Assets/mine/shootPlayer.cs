@@ -15,6 +15,7 @@ public class shootPlayer : MonoBehaviour
     void Start()
     {
         target = GameObject.FindObjectOfType<PlayerMovement>().gameObject.transform.position;
+        
         speed = 8;
        
 
@@ -34,6 +35,20 @@ public class shootPlayer : MonoBehaviour
 
 
     }
+    
+    //private void OnCollisionEnter2D(Collision2D other)
+    //{
+      //  if (other.gameObject.CompareTag("Spikes"))
+       // {
+         //   if (!iframes)
+           // {
+          //      iframes = true;
+          //      hud.health += -1;
+         //   }
+       // }
+             
+            
+    //}
     
 }
 

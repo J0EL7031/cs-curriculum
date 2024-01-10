@@ -40357,6 +40357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerx: 0
+  playery: 0
   health: 0
   coins: 0
   coinText: {fileID: 1101109203}
@@ -40906,6 +40907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerx: 0
+  playery: 0
   health: 0
   coins: 0
   coinText: {fileID: 1101109203}
@@ -85163,6 +85165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hud: {fileID: 800287813}
+  iframes: 0
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,
@@ -85971,12 +85974,27 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
+--- !u!114 &2049880036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049880028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52495b9580bfa4dac9b2fe12b0db2d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  hud: {fileID: 1205402297}
+  enemySpeed: 0
 --- !u!1001 &2066015542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86116,6 +86134,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2049880032}
+    - targetCorrespondingSourceObject: {fileID: 3736838050167469039, guid: fbdc99957549444bfba281e61d9d218c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2049880036}
   m_SourcePrefab: {fileID: 100100000, guid: fbdc99957549444bfba281e61d9d218c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

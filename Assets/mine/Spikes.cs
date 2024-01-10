@@ -10,7 +10,7 @@ public class Spikes : MonoBehaviour
 {
     public HUD hud;
 
-    private bool iframes;
+    public bool iframes;
     private float iframesTimer;
     
     //public int health;
@@ -53,6 +53,8 @@ public class Spikes : MonoBehaviour
                     hud.health += -1;
                 }
             }
+             
+            
         }
    
 }
