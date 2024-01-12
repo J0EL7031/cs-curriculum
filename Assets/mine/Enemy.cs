@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,6 +53,9 @@ public class Enemy : MonoBehaviour
              player = other.gameObject;
              range = true;
          }
+         
+         
+     
      }
     
     void OnTriggerExit2D(Collider2D other)
@@ -62,16 +66,18 @@ public class Enemy : MonoBehaviour
             range = false;
         }
     }
-     
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Spikes"))
         {
             
-                hud.health += -1;
-            
+            Destroy(gameObject);
+
         }
-             
-            
+        
+       
     }
+
+    
 }

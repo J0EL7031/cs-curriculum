@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -54,7 +55,29 @@ public class Spikes : MonoBehaviour
                 }
             }
              
+             if (other.gameObject.CompareTag("Enemy"))
+             {
+                 if (!iframes)
+                 {
+                     iframes = true;
+                     hud.health += -2;
+                 }
+             }
+             
             
         }
-   
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("FireBall"))
+        {
+            if (!iframes)
+            {
+                iframes = true;
+                Destroy(other.gameObject);
+                hud.health += -1;
+            }
+        }
+    }
+
 }

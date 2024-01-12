@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8905780176731373626}
   m_Layer: 0
   m_Name: Turret_Projectile
-  m_TagString: Untagged
+  m_TagString: FireBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,8 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45ffc51523ebe4002b9f7a182ff9b9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hud: {fileID: 0}
-  fireX: 0
+  speed: 0
 --- !u!50 &8905780176731373626
 Rigidbody2D:
   serializedVersion: 4
