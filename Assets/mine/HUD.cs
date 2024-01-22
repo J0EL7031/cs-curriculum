@@ -12,6 +12,7 @@ public class HUD : MonoBehaviour
 
     public int health;
     public int coins;
+    public bool axe;
 
     public TextMeshProUGUI coinText;
     public TextMeshProUGUI healthText;
@@ -35,7 +36,7 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        axe = false;
     }
 
     // Update is called once per frame

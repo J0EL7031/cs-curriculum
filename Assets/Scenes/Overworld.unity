@@ -40134,6 +40134,12 @@ Transform:
   - {fileID: 1825907749}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &738259006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8928701524657299959, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 811276553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &747287426
 GameObject:
   m_ObjectHideFlags: 0
@@ -40360,8 +40366,77 @@ MonoBehaviour:
   playery: 0
   health: 0
   coins: 0
+  axe: 0
   coinText: {fileID: 1101109203}
   healthText: {fileID: 1968194883}
+--- !u!1001 &811276553
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -101.48247
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -26.669098
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257178088538173816, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8928701524657299959, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac,
+        type: 3}
+      propertyPath: m_Name
+      value: AxeItem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d2bc4cf5fda5c740b9cedcdbc7c87ac, type: 3}
 --- !u!1001 &848324723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40910,6 +40985,7 @@ MonoBehaviour:
   playery: 0
   health: 0
   coins: 0
+  axe: 0
   coinText: {fileID: 1101109203}
   healthText: {fileID: 1968194883}
 --- !u!4 &1205402298
@@ -85118,6 +85194,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1750497393}
+    - targetCorrespondingSourceObject: {fileID: 412193027009803667, guid: 34448014912494d33b041af48acd0291,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1750497397}
   m_SourcePrefab: {fileID: 100100000, guid: 34448014912494d33b041af48acd0291, type: 3}
 --- !u!1 &1750497384 stripped
 GameObject:
@@ -85166,6 +85246,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hud: {fileID: 800287813}
   iframes: 0
+--- !u!114 &1750497397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750497384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c30abec72d08480cbdafed4cca5d0a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hud: {fileID: 800287813}
 --- !u!4 &1825907749 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281311786053241907, guid: 69c7343f050914c7787bbbe42c07b5b8,
@@ -85995,6 +86088,7 @@ MonoBehaviour:
   range: 0
   hud: {fileID: 1205402297}
   enemySpeed: 0
+  AxeItem: {fileID: 738259006}
 --- !u!1001 &2066015542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86156,3 +86250,4 @@ SceneRoots:
   - {fileID: 1899628413}
   - {fileID: 909069000}
   - {fileID: 2141334987}
+  - {fileID: 811276553}

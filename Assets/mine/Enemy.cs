@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = System.Object;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Enemy : MonoBehaviour
     private Vector3 target;
 
     public int enemySpeed;
+
+    public GameObject AxeItem;
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +74,12 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Spikes"))
         {
+            if (hud.axe)
+            {
+                GameObject clone;
+                
+                clone = Instantiate(AxeItem, transform.position + new Vector3(0,0,0), transform.rotation);
+            }
             
             Destroy(gameObject);
 
