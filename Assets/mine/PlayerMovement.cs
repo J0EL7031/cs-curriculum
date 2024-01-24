@@ -12,7 +12,10 @@ public class PlayerMovement : MonoBehaviour
     float yspeed;
     float ydirection;
     float yvector;
+    private Rigidbody2D RB;
     public bool inCaves;
+
+    public float yvolocity;
 
     public HUD hud;
     
@@ -27,19 +30,36 @@ public class PlayerMovement : MonoBehaviour
         {
             yspeed = 0;
         }
+
+        yvolocity = 0;
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        
+            xdirection = Input.GetAxis("Horizontal");
+            xvector = xdirection * xspeed * Time.deltaTime;
+            ydirection = Input.GetAxis("Vertical");
+            yvector = ydirection * yspeed * Time.deltaTime;
+            transform.position = transform.position + new Vector3(xvector, y: yvector, z: 0f);
+            hud.playerx = gameObject.transform.position.x;
+            hud.playery = gameObject.transform.position.y;
 
-        xdirection = Input.GetAxis("Horizontal");
-        xvector = xdirection * xspeed * Time.deltaTime;
-        ydirection = Input.GetAxis("Vertical");
-        yvector = ydirection * yspeed * Time.deltaTime;
-        transform.position = transform.position + new Vector3(xvector, y: yvector, z: 0f);
-        hud.playerx = gameObject.transform.position.x;
-        hud.playery = gameObject.transform.position.y;
+            transform.position = transform.position + new Vector3(0, yvolocity, 0);
+
+            yvolocity = 0;
+
+            if (inCaves)
+            {
+                if (Input.GetKeyDown(KeyCode.UpArrow))
+                {
+                    yvolocity = 5;
+
+
+                }
+            }
+        
     }
 }
