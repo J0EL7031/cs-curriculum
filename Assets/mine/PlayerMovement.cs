@@ -18,11 +18,14 @@ public class PlayerMovement : MonoBehaviour
     public float yvolocity;
 
     public HUD hud;
+
+    public bool onGround;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        RB = GetComponent<Rigidbody2D>();
         
         xspeed = 5f;
         yspeed = 5f;
@@ -38,7 +41,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (inCaves != true)
+        {
             xdirection = Input.GetAxis("Horizontal");
             xvector = xdirection * xspeed * Time.deltaTime;
             ydirection = Input.GetAxis("Vertical");
@@ -46,20 +50,42 @@ public class PlayerMovement : MonoBehaviour
             transform.position = transform.position + new Vector3(xvector, y: yvector, z: 0f);
             hud.playerx = gameObject.transform.position.x;
             hud.playery = gameObject.transform.position.y;
+        }
 
-            transform.position = transform.position + new Vector3(0, yvolocity, 0);
 
-            yvolocity = 0;
+
+        yvolocity = 0;
 
             if (inCaves)
             {
+                xdirection = Input.GetAxis("Horizontal");
+                xvector = xdirection * xspeed * Time.deltaTime;
+
+                if (Physics2D.Raycast(transform.position, Vector2.down, 1f))
+                {
+                    onGround = true;
+                }
+                
+                
+                transform.position = transform.position + new Vector3(xvector, y: 0, z: 0f);
+                hud.playerx = gameObject.transform.position.x;
+                hud.playery = gameObject.transform.position.y;
+                
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
-                    yvolocity = 5;
-
+                    if (onGround)
+                        {
+                            onGround = false;
+                            
+                            RB.AddForce(Vector3.up * 250);
+                            
+                        }
 
                 }
+
+                
             }
+            
         
     }
 }
