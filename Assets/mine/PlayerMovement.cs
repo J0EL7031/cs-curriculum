@@ -20,13 +20,19 @@ public class PlayerMovement : MonoBehaviour
     public HUD hud;
 
     public bool onGround;
+
+    public int jumps;
     
 
     // Start is called before the first frame update
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
-        
+
+
+        jumps = 0;
+            
+            
         xspeed = 5f;
         yspeed = 5f;
         if (inCaves)
@@ -52,7 +58,10 @@ public class PlayerMovement : MonoBehaviour
             hud.playery = gameObject.transform.position.y;
         }
 
-
+        if (onGround)
+        {
+            jumps = 0;
+        }
 
         yvolocity = 0;
 
@@ -61,10 +70,10 @@ public class PlayerMovement : MonoBehaviour
                 xdirection = Input.GetAxis("Horizontal");
                 xvector = xdirection * xspeed * Time.deltaTime;
 
-                if (Physics2D.Raycast(transform.position, Vector2.down, 1f))
-                {
-                    onGround = true;
-                }
+                onGround = (Physics2D.Raycast(transform.position, Vector2.down, 1f));
+                
+                   
+                
                 
                 
                 transform.position = transform.position + new Vector3(xvector, y: 0, z: 0f);
@@ -72,14 +81,31 @@ public class PlayerMovement : MonoBehaviour
                 hud.playery = gameObject.transform.position.y;
                 
                 if (Input.GetKeyDown(KeyCode.UpArrow))
-                {
+                { 
+                    
+                    if (onGround != true)
+                                     {
+                                         if (jumps < 2)
+                                         {
+                                             jumps = 2;
+                                                 
+                                             RB.AddForce(Vector3.up * 350);
+                                         }
+                                     }
                     if (onGround)
                         {
-                            onGround = false;
                             
-                            RB.AddForce(Vector3.up * 250);
+
+                                jumps = 1;
+                                
+                                RB.AddForce(Vector3.up * 300);
+
+                                onGround = false;
                             
+
                         }
+
+                   
 
                 }
 
