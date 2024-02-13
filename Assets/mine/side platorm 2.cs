@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sideplatform : MonoBehaviour
+public class sideplatorm2 : MonoBehaviour
 {
 
     public float rightLimit;
@@ -19,8 +19,8 @@ public class sideplatform : MonoBehaviour
 
         direction = 1;
 
-        rightLimit = 60;
-        leftLimit = 50;
+        rightLimit = 75;
+        leftLimit = 65;
     }
 
     // Update is called once per frame
